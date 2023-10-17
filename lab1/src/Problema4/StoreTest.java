@@ -20,6 +20,13 @@ public class StoreTest {
         int cheapestKeyboard = store.cheapestKeyboard(keyboardPrices);
 
         assertEquals(15, cheapestKeyboard, SHOULD_BE_EQUAL);
+
+        try {
+            int[] emptyArray = {};
+            int result = store.cheapestKeyboard(emptyArray);
+        } catch (IllegalArgumentException e) {
+            assertEquals("Empty array", e.getMessage());
+        }
     }
     @Test void mostExpensiveTest(){
         int[] usbPrices = {15, 20, 10, 35};
@@ -27,6 +34,13 @@ public class StoreTest {
         int mostExpensive = store.mostExpensive(keyboardPrices2, usbPrices);
 
         assertEquals(40, mostExpensive, SHOULD_BE_EQUAL);
+
+        try {
+            int[] emptyArray = {};
+            int result = store.mostExpensive(emptyArray, keyboardPrices2);
+        } catch (IllegalArgumentException e) {
+            assertEquals("Empty array", e.getMessage());
+        }
     }
     @Test void affordableUsbTest(){
         int[] usbPrices = {15, 20, 10, 35};
@@ -34,6 +48,13 @@ public class StoreTest {
         int affordableUsb = store.affordableUsb(usbPrices, budget);
 
         assertEquals(20, affordableUsb, SHOULD_BE_EQUAL);
+
+        try {
+            int[] emptyArray = {};
+            int result = store.affordableUsb(emptyArray, budget);
+        } catch (IllegalArgumentException e) {
+            assertEquals("Empty array", e.getMessage());
+        }
     }
     @Test void bestCombinationPriceTest(){
         int budget1 = 59;
@@ -42,5 +63,12 @@ public class StoreTest {
         int bestCombinationPrice = store.bestCombinationPrice(usbPrices1, keyboardPrices3, budget1);
 
         assertEquals(57, bestCombinationPrice, SHOULD_BE_EQUAL);
+
+        try {
+            int[] emptyArray = {};
+            int result = store.bestCombinationPrice(emptyArray, usbPrices1, budget1);
+        } catch (IllegalArgumentException e) {
+            assertEquals("Empty array", e.getMessage());
+        }
     }
 }
