@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Optional;
 
 public class VolunteerRepo implements Repo{
-    private List<Volunteer> volunteers = new ArrayList<>(); // Initialize ArrayList instead of List
+    private static List<Volunteer> volunteers = new ArrayList<>(); // Initialize ArrayList instead of List
 
     @Override
     public void save(Object entity) {
