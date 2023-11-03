@@ -21,7 +21,7 @@ class VolunteerTests {
         Volunteer actual = repo.findById(1);
 
         // Assert
-        assertEquals(volunteer1.getVolunteer_id(), actual.getVolunteer_id());
+        assertEquals(volunteer1.getVolunteerId(), actual.getVolunteerId());
         assertEquals(volunteer1.getName(), actual.getName());
         assertEquals(volunteer1.getEmail(), actual.getEmail());
         assertEquals(volunteer1.getPhone(), actual.getPhone());
@@ -80,7 +80,7 @@ class VolunteerTests {
         // Assert
         assertNotNull(foundVolunteer1);
         assertNotNull(foundVolunteer2);
-        assertEquals(volunteer1.getVolunteer_id(), foundVolunteer1.getVolunteer_id());
-        assertEquals(volunteer2.getVolunteer_id(), foundVolunteer2.getVolunteer_id());
+        assertEquals(volunteer1.getVolunteerId(), foundVolunteer1.getVolunteerId());
+        assertEquals(volunteer2.getVolunteerId(), foundVolunteer2.getVolunteerId());
     }
 }

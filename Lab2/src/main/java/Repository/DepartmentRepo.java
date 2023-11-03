@@ -33,7 +33,7 @@ public class DepartmentRepo implements Repo{
     }
 
     @Override
-    public List findAll() {
+    public List<Department> findAll() {
         return departments;
     }
 }

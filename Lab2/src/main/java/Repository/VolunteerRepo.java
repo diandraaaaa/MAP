@@ -17,7 +17,7 @@ public class VolunteerRepo implements Repo{
     @Override
     public Volunteer findById(int id) {
         for (Volunteer volunteer : volunteers){
-            if(volunteer.getVolunteer_id()==id)
+            if(volunteer.getVolunteerId()==id)
                 return volunteer;
         }
         return null;
@@ -26,14 +26,14 @@ public class VolunteerRepo implements Repo{
     @Override
     public void deleteById(int id) {
         for (Volunteer volunteer : volunteers){
-            if(volunteer.getVolunteer_id()==id){
+            if(volunteer.getVolunteerId()==id){
                 volunteers.remove(volunteer);
             }
         }
     }
 
     @Override
-    public List findAll() {
+    public List<Volunteer> findAll() {
         return volunteers;
     }
 }

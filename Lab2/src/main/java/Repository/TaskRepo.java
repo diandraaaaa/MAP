@@ -33,7 +33,7 @@ public class TaskRepo implements Repo{
     }
 
     @Override
-    public List findAll() {
+    public List<Task> findAll() {
         return tasks;
     }
 }

@@ -5,7 +5,11 @@ public class Volunteer {
     public String name;
     public String email;
     public String phone;
-    public int getVolunteer_id() {
+
+    public Volunteer(int taskId, String difficulty, String taskDescription, int duration, int volunteerId) {
+    }
+
+    public int getVolunteerId() {
         return volunteer_id;
     }
 
